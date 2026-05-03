@@ -81,5 +81,3 @@ https://cdn.jsdelivr.net/gh/ZeroPing89/beatzone-theme@main/beatzone-internal.min
 
 
 ---
-
-## 🚀 Installation (AzuraCast)
