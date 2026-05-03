@@ -80,4 +80,144 @@ https://cdn.jsdelivr.net/gh/ZeroPing89/beatzone-theme@main/beatzone-theme.min.js
 https://cdn.jsdelivr.net/gh/ZeroPing89/beatzone-theme@main/beatzone-internal.min.css
 
 
+
 ---
+
+## 🚀 Installation (AzuraCast)
+
+### 📌 Custom CSS for Public Pages:
+```css
+@import url('https://cdn.jsdelivr.net/gh/ZeroPing89/beatzone-theme@main/beatzone-theme.min.css');
+
+📌 Custom JS for Public Pages:
+var s=document.createElement('script');s.src='https://cdn.jsdelivr.net/gh/ZeroPing89/beatzone-theme@main/beatzone-theme.min.js';document.head.appendChild(s);
+
+📌 Custom CSS for Internal Pages:
+@import url('https://cdn.jsdelivr.net/gh/ZeroPing89/beatzone-theme@main/beatzone-internal.min.css');
+
+🔄 How to Update Files
+Step 1 — Edit original source code (CSS or JS)
+Step 2 — Minify / Obfuscate:
+
+    CSS → CleanCSS Minifier
+    JS → Obfuscator.io
+
+Step 3 — Upload to GitHub:
+
+    Open the file on GitHub
+    Click the ✏️ pencil icon (Edit)
+    Delete everything
+    Paste the new code
+    Click Commit changes
+
+Step 4 — Purge jsDelivr Cache:
+
+Open these URLs in your browser:
+
+https://purge.jsdelivr.net/gh/ZeroPing89/beatzone-theme@main/beatzone-theme.min.css
+https://purge.jsdelivr.net/gh/ZeroPing89/beatzone-theme@main/beatzone-theme.min.js
+https://purge.jsdelivr.net/gh/ZeroPing89/beatzone-theme@main/beatzone-internal.min.css
+
+Step 5 — Verify:
+
+Open your radio page in Incognito mode (Ctrl+Shift+N)
+🛡️ JS Obfuscation Settings (obfuscator.io)
+
+═══════════════════════════════════════════════
+BASIC OPTIONS
+═══════════════════════════════════════════════
+Target:                         Browser
+Strict Mode:                    ✅ ON
+Seed:                           123456
+
+═══════════════════════════════════════════════
+PROTECTION
+═══════════════════════════════════════════════
+Self Defending:                 ✅ ON
+Debug Protection:               ✅ ON
+  → Interval:                   500ms
+Domain Lock:                    ✅ ON
+  → Domains:                    beatzone.best
+                                radio.beatzone.best
+
+═══════════════════════════════════════════════
+STRINGS
+═══════════════════════════════════════════════
+String Array:                   ✅ ON
+String Array Encoding:          rc4
+String Array Threshold:         0.8
+Split Strings:                  ✅ ON
+  → Chunk Length:               5
+Force Transform Strings:        ✅ ON
+
+═══════════════════════════════════════════════
+IDENTIFIERS
+═══════════════════════════════════════════════
+Identifier Names Generator:     mangled-shuffled
+Identifiers Prefix:             bz_
+Rename Globals:                 ✅ ON
+Rename Properties:              ❌ OFF (breaks DOM)
+
+═══════════════════════════════════════════════
+CONTROL FLOW
+═══════════════════════════════════════════════
+Control Flow Flattening:        ✅ ON
+  → Threshold:                  0.65
+Dead Code Injection:            ✅ ON
+  → Threshold:                  0.4
+Numbers To Expressions:         ✅ ON
+
+═══════════════════════════════════════════════
+DO NOT ENABLE
+═══════════════════════════════════════════════
+VM Obfuscation:                 ❌ OFF
+Rename Properties:              ❌ OFF
+Disable Console Output:         ❌ OFF
+
+🎵 Color Palette
+🌐 Public Theme (Pescobar Gold)
+Color	Hex	Usage
+🟡 Gold	#ECD164	Primary buttons, accents
+🟤 Dark Gold	#C8B360	Borders, secondary
+🔵 Navy	#273852	Background, text on buttons
+⚫ Dark Blue	#14233A	Card backgrounds
+🛠️ Internal Theme (BeatZone RGB)
+Color	Hex	Usage
+🔵 Cyan	#00CCFF	Active states, accents
+🟡 Yellow Neon	#FFFF00	Titles, headings
+🔴 Red	#FF0000	Danger, close buttons
+🔵 Blue Electric	#0066FF	Primary buttons
+⬛ Pure Black	#000000	Background
+📊 Protection Level Summary
+
+╔══════════════════════════════════════════════╗
+║          PROTECTION LEVEL: MAXIMUM           ║
+╠══════════════════════════════════════════════╣
+║                                              ║
+║  ✅ Comments removed                         ║
+║  ✅ CSS minified to single line              ║
+║  ✅ JS obfuscated with RC4 encryption        ║
+║  ✅ Control Flow Flattening enabled          ║
+║  ✅ Dead Code Injection enabled              ║
+║  ✅ String Array with RC4 encoding           ║
+║  ✅ Self Defending mechanism                 ║
+║  ✅ Debug Protection active                  ║
+║  ✅ Domain Locked to beatzone.best           ║
+║  ✅ External files on CDN (clean source)     ║
+║                                              ║
+╚══════════════════════════════════════════════╝
+
+👨‍💻 Credits
+<div align="center">
+
+Made with ❤️ and lots of ☕ by KaiDz
+
+🎵 BeatZone Radio — Feel the Beat, Live the Music 🎵
+
+🌊 Pescobar Radio — Deep as the sea 🌊
+
+© BeatZone Radio 2026. All rights reserved.
+
+⚠️ This theme is proprietary software.
+Unauthorized copying, modification, or distribution is strictly prohibited.
+</div> ```
