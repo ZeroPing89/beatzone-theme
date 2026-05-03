@@ -1,24 +1,9 @@
-/* ============================================
-   BEATZONE RADIO | PESCOBAR THEME CSS
-   Versiune: 1.0.2 | Data: 2026
-   Background DJ Girl + Note muzicale + Pescobar Style
-   Footer Modificat - Comic Sans MS
-   Made with ❤️ by KaiDz
-   https://kaidz.eu
-============================================ */
-
-/* === IMPORTARE FONTURI === */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap');
 
-/* === RESET === */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-/* ============================================
-   BACKGROUND - DJ GIRL + OVERLAY PESCOBAR
-   Imaginea originala BeatZone + culori Pescobar
-============================================ */
 body {
     margin: 0;
     padding: 0;
@@ -41,9 +26,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ============================================
-   OVERLAY GRADIENT ANIMAT - PESCOBAR COLORS
-============================================ */
 body::before {
     content: '';
     position: fixed;
@@ -68,26 +50,13 @@ body::before {
 }
 
 @keyframes rotateOverlayPescobar {
-    0% {
-        transform: rotate(0deg) scale(1);
-    }
-    25% {
-        transform: rotate(90deg) scale(1.05);
-    }
-    50% {
-        transform: rotate(180deg) scale(1.1);
-    }
-    75% {
-        transform: rotate(270deg) scale(1.05);
-    }
-    100% {
-        transform: rotate(360deg) scale(1);
-    }
+    0% { transform: rotate(0deg) scale(1); }
+    25% { transform: rotate(90deg) scale(1.05); }
+    50% { transform: rotate(180deg) scale(1.1); }
+    75% { transform: rotate(270deg) scale(1.05); }
+    100% { transform: rotate(360deg) scale(1); }
 }
 
-/* ============================================
-   NOTE MUZICALE PLUTITOARE PE ECRAN
-============================================ */
 body::after {
     content: '♪ ♫ ♪ ♫ ♪ ♬ ♩ ♪ ♫ ♪ ♬ ♩ ♫ ♪';
     position: fixed;
@@ -109,43 +78,21 @@ body::after {
 }
 
 @keyframes floatNotesPescobar {
-    0% {
-        transform: translateY(100vh) rotate(0deg);
-        opacity: 0;
-    }
-    5% {
-        opacity: 0.6;
-    }
-    10% {
-        opacity: 1;
-    }
-    85% {
-        opacity: 1;
-    }
-    95% {
-        opacity: 0.4;
-    }
-    100% {
-        transform: translateY(-100vh) rotate(360deg);
-        opacity: 0;
-    }
+    0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+    5% { opacity: 0.6; }
+    10% { opacity: 1; }
+    85% { opacity: 1; }
+    95% { opacity: 0.4; }
+    100% { transform: translateY(-100vh) rotate(360deg); opacity: 0; }
 }
 
-/* ============================================
-   CONTAINERUL PRINCIPAL AZURACAST
-============================================ */
-#app,
-.public-page,
-.station-page {
+#app, .public-page, .station-page {
     background: transparent !important;
     font-family: 'Nunito', sans-serif !important;
     position: relative;
     z-index: 1;
 }
 
-/* ============================================
-   CARDUL PRINCIPAL - CENTRAT PE ECRAN
-============================================ */
 .radio-player-card {
     position: fixed !important;
     top: 50% !important;
@@ -170,9 +117,6 @@ body::after {
     animation: none !important;
 }
 
-/* ============================================
-   HEADER CARD
-============================================ */
 .radio-player-card .card-header,
 .card-header {
     background: rgba(15, 28, 48, 0.95) !important;
@@ -196,9 +140,6 @@ body::after {
     margin-right: auto !important;
 }
 
-/* ============================================
-   TITLU CARD
-============================================ */
 h2.card-title,
 .card-title,
 h2[class*="card-title"],
@@ -237,9 +178,6 @@ h2[class*="card-title"],
     margin: 0 auto !important;
 }
 
-/* ============================================
-   BUTON PLAY - AURIU PESCOBAR
-============================================ */
 button[class*="play"],
 .btn-play,
 .play-button,
@@ -275,9 +213,6 @@ button[title*="Play"]:hover {
     transform: scale(1.05) !important;
 }
 
-/* ============================================
-   BUTON STOP - ALBASTRU INCHIS
-============================================ */
 button[class*="stop"],
 .btn-stop,
 .stop-button,
@@ -309,9 +244,6 @@ button[title*="Stop"]:hover {
     transform: scale(1.05) !important;
 }
 
-/* ============================================
-   BODY CARD
-============================================ */
 .radio-player-card .card-body {
     background: rgba(20, 35, 58, 0.85) !important;
     padding: 18px 22px !important;
@@ -319,9 +251,6 @@ button[title*="Stop"]:hover {
     max-height: calc(90vh - 160px) !important;
 }
 
-/* ============================================
-   BUTOANE NAVIGATIE - SONG HISTORY, REQUEST, PLAYLIST
-============================================ */
 .card-body.buttons,
 .card-body.buttons.pt-0,
 div.card-body.buttons {
@@ -400,9 +329,6 @@ div.card-body.buttons {
     left: -9999px !important;
 }
 
-/* ============================================
-   PLAYLIST FIX - AUDIO
-============================================ */
 .card-body.buttons a.playlist-fixed {
     cursor: pointer !important;
 }
@@ -416,9 +342,6 @@ video,
     z-index: 1 !important;
 }
 
-/* ============================================
-   NOW PLAYING INFO
-============================================ */
 .now-playing-info h4,
 .now-playing-info h5 {
     font-family: 'Nunito', sans-serif !important;
@@ -429,31 +352,12 @@ video,
     margin: 8px 0 !important;
 }
 
-/* ============================================
-   TIMP MELODIE
-============================================ */
-.time,
-.duration,
-.current-time,
-.total-time,
-.elapsed,
-.remaining,
-[class*="time"],
-[class*="duration"],
-[class*="elapsed"],
-[class*="remaining"],
-.progress-time,
-span.time,
-.player-time,
-.song-time,
-.track-time,
-.now-playing-time,
-small[class*="time"],
-.text-muted[class*="time"],
-.card-body [class*="time"],
-.card-body [class*="duration"],
-.radio-player-card [class*="time"],
-.radio-player-card [class*="duration"] {
+.time, .duration, .current-time, .total-time, .elapsed, .remaining,
+[class*="time"], [class*="duration"], [class*="elapsed"], [class*="remaining"],
+.progress-time, span.time, .player-time, .song-time, .track-time,
+.now-playing-time, small[class*="time"], .text-muted[class*="time"],
+.card-body [class*="time"], .card-body [class*="duration"],
+.radio-player-card [class*="time"], .radio-player-card [class*="duration"] {
     color: rgba(200, 179, 96, 0.75) !important;
     text-shadow: none !important;
     font-family: 'Nunito', sans-serif !important;
@@ -461,9 +365,6 @@ small[class*="time"],
     font-size: 12px !important;
 }
 
-/* ============================================
-   PROGRESS BAR
-============================================ */
 .progress,
 .progress-bar-container,
 [class*="progress"]:not(.progress-bar) {
@@ -476,19 +377,11 @@ small[class*="time"],
 .progress-bar,
 .progress-fill,
 [class*="progress-bar"] {
-    background: linear-gradient(
-        90deg,
-        #273852 0%,
-        #C8B360 40%,
-        #ECD164 100%
-    ) !important;
+    background: linear-gradient(90deg, #273852 0%, #C8B360 40%, #ECD164 100%) !important;
     border-radius: 50px !important;
     transition: width 0.3s ease !important;
 }
 
-/* ============================================
-   VOLUME SLIDER
-============================================ */
 input[type="range"] {
     -webkit-appearance: none !important;
     appearance: none !important;
@@ -507,9 +400,7 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 50% !important;
     background: #ECD164 !important;
     cursor: pointer !important;
-    box-shadow:
-        0 0 8px rgba(236, 209, 100, 0.5),
-        0 0 20px rgba(236, 209, 100, 0.15) !important;
+    box-shadow: 0 0 8px rgba(236, 209, 100, 0.5), 0 0 20px rgba(236, 209, 100, 0.15) !important;
     border: 2px solid rgba(255, 255, 255, 0.2) !important;
 }
 
@@ -522,9 +413,6 @@ input[type="range"]::-moz-range-thumb {
     border: 2px solid rgba(255, 255, 255, 0.2) !important;
 }
 
-/* ============================================
-   BUTTON CONTAINER PRINCIPAL
-============================================ */
 .button-container {
     display: flex !important;
     flex-direction: row !important;
@@ -569,9 +457,6 @@ input[type="range"]::-moz-range-thumb {
     box-shadow: 0 5px 18px rgba(200, 179, 96, 0.2) !important;
 }
 
-/* ============================================
-   TABELE - SONG HISTORY / PLAYLIST
-============================================ */
 table {
     width: 100% !important;
     border-collapse: separate !important;
@@ -636,21 +521,11 @@ table tbody td {
     vertical-align: middle !important;
 }
 
-/* ============================================
-   TD.SHRINK + ACTIONS
-============================================ */
-td.shrink,
-th.shrink,
-.shrink,
-td[class*="shrink"],
-table td.shrink,
-tbody td.shrink,
-.modal-body table td.shrink,
-.modal-content table td.shrink,
-table td:last-child,
-tbody td:last-child,
-.modal-body table td:last-child,
-.modal-content table td:last-child {
+td.shrink, th.shrink, .shrink,
+td[class*="shrink"], table td.shrink, tbody td.shrink,
+.modal-body table td.shrink, .modal-content table td.shrink,
+table td:last-child, tbody td:last-child,
+.modal-body table td:last-child, .modal-content table td:last-child {
     width: auto !important;
     min-width: 110px !important;
     max-width: none !important;
@@ -666,12 +541,8 @@ tbody td:last-child,
 }
 
 .d-flex.align-items-center,
-td .d-flex,
-td.shrink .d-flex,
-.shrink .d-flex,
-td:last-child .d-flex,
-.modal-body td .d-flex,
-.modal-content td .d-flex {
+td .d-flex, td.shrink .d-flex, .shrink .d-flex,
+td:last-child .d-flex, .modal-body td .d-flex, .modal-content td .d-flex {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
@@ -679,52 +550,25 @@ td:last-child .d-flex,
     gap: 6px !important;
 }
 
-/* ============================================
-   BUTOANE REQUEST IN TABEL - AURIU PESCOBAR
-============================================ */
-table button,
-table .btn,
-table a.btn,
-tbody button,
-tbody .btn,
-tbody a.btn,
-tr button,
-tr .btn,
-tr a.btn,
-td button,
-td .btn,
-td a.btn,
-td.shrink button,
-td.shrink .btn,
-.shrink button,
-.shrink .btn,
-.d-flex button,
-.d-flex .btn,
-.modal-body table button,
-.modal-body table .btn,
-.modal-body tbody button,
-.modal-body tbody .btn,
-.modal-body td button,
-.modal-body td .btn,
-.modal-body td.shrink button,
-.modal-body td.shrink .btn,
-.modal-content table button,
-.modal-content table .btn,
-.modal-content tbody button,
-.modal-content tbody .btn,
-.modal-content td button,
-.modal-content td .btn,
-.modal-content td.shrink button,
-.modal-content td.shrink .btn,
-table .btn-sm,
-table .btn-primary,
-table .btn-sm.btn-primary,
-tbody .btn-sm,
-tbody .btn-primary,
-td .btn-sm,
-td .btn-primary,
-button.btn-sm.btn-primary,
-.btn.btn-sm.btn-primary {
+table button, table .btn, table a.btn,
+tbody button, tbody .btn, tbody a.btn,
+tr button, tr .btn, tr a.btn,
+td button, td .btn, td a.btn,
+td.shrink button, td.shrink .btn,
+.shrink button, .shrink .btn,
+.d-flex button, .d-flex .btn,
+.modal-body table button, .modal-body table .btn,
+.modal-body tbody button, .modal-body tbody .btn,
+.modal-body td button, .modal-body td .btn,
+.modal-body td.shrink button, .modal-body td.shrink .btn,
+.modal-content table button, .modal-content table .btn,
+.modal-content tbody button, .modal-content tbody .btn,
+.modal-content td button, .modal-content td .btn,
+.modal-content td.shrink button, .modal-content td.shrink .btn,
+table .btn-sm, table .btn-primary, table .btn-sm.btn-primary,
+tbody .btn-sm, tbody .btn-primary,
+td .btn-sm, td .btn-primary,
+button.btn-sm.btn-primary, .btn.btn-sm.btn-primary {
     display: inline-flex !important;
     visibility: visible !important;
     opacity: 1 !important;
@@ -760,65 +604,36 @@ button.btn-sm.btn-primary,
     transition: all 0.25s ease !important;
 }
 
-table button:hover,
-table .btn:hover,
-tbody button:hover,
-tbody .btn:hover,
-td button:hover,
-td .btn:hover,
-td.shrink button:hover,
-td.shrink .btn:hover,
-.d-flex button:hover,
-.d-flex .btn:hover,
-.modal-body table button:hover,
-.modal-body table .btn:hover,
-.modal-body td button:hover,
-.modal-body td .btn:hover,
-.modal-content table button:hover,
-.modal-content td button:hover,
-table .btn-sm:hover,
-table .btn-primary:hover,
-td .btn-sm:hover,
-td .btn-primary:hover {
+table button:hover, table .btn:hover,
+tbody button:hover, tbody .btn:hover,
+td button:hover, td .btn:hover,
+td.shrink button:hover, td.shrink .btn:hover,
+.d-flex button:hover, .d-flex .btn:hover,
+.modal-body table button:hover, .modal-body table .btn:hover,
+.modal-body td button:hover, .modal-body td .btn:hover,
+.modal-content table button:hover, .modal-content td button:hover,
+table .btn-sm:hover, table .btn-primary:hover,
+td .btn-sm:hover, td .btn-primary:hover {
     background: #CFB64E !important;
     border-color: #B8A040 !important;
     transform: translateY(-2px) !important;
     box-shadow: 0 5px 18px rgba(200, 179, 96, 0.4) !important;
 }
 
-table button:active,
-tbody button:active,
-td button:active,
-td.shrink button:active,
-.d-flex button:active,
-.modal-body table button:active,
-.modal-content table button:active {
+table button:active, tbody button:active, td button:active,
+td.shrink button:active, .d-flex button:active,
+.modal-body table button:active, .modal-content table button:active {
     transform: scale(0.96) !important;
     background: #B8A040 !important;
     box-shadow: 0 1px 5px rgba(200, 179, 96, 0.3) !important;
 }
 
-/* ============================================
-   OVERFLOW GLOBAL FIX
-============================================ */
-table,
-table *,
-tbody,
-tbody *,
-tr,
-tr *,
-td,
-td *,
-.modal-body table,
-.modal-body table *,
-.modal-content table,
-.modal-content table * {
+table, table *, tbody, tbody *, tr, tr *, td, td *,
+.modal-body table, .modal-body table *,
+.modal-content table, .modal-content table * {
     overflow: visible !important;
 }
 
-/* ============================================
-   MODALE - PESCOBAR STYLE
-============================================ */
 .modal-content {
     background: rgba(20, 35, 58, 0.97) !important;
     border-radius: 16px !important;
@@ -842,12 +657,8 @@ td *,
 }
 
 .modal-header .modal-title,
-.modal-header h1,
-.modal-header h2,
-.modal-header h3,
-.modal-header h4,
-.modal-header h5,
-.modal-header h6,
+.modal-header h1, .modal-header h2, .modal-header h3,
+.modal-header h4, .modal-header h5, .modal-header h6,
 .modal-title {
     font-family: 'Nunito', sans-serif !important;
     color: #ffffff !important;
@@ -863,17 +674,10 @@ td *,
     padding: 0 !important;
 }
 
-/* ============================================
-   BUTON X INCHIDERE MODAL
-============================================ */
-.modal-header .btn-close,
-.modal-header .close,
+.modal-header .btn-close, .modal-header .close,
 .modal-header button[aria-label="Close"],
 .modal-header button.close,
-button.btn-close,
-button.close,
-.btn-close,
-.close {
+button.btn-close, button.close, .btn-close, .close {
     position: absolute !important;
     top: 50% !important;
     right: 15px !important;
@@ -905,27 +709,22 @@ button.close,
     transition: all 0.25s ease !important;
 }
 
-.modal-header .btn-close::before,
-.modal-header .close::before,
-.btn-close::before,
-.close::before {
+.modal-header .btn-close::before, .modal-header .close::before,
+.btn-close::before, .close::before {
     content: "✕" !important;
     color: #273852 !important;
     font-size: 14px !important;
     font-weight: bold !important;
 }
 
-.modal-header .btn-close:hover,
-.modal-header .close:hover,
-.btn-close:hover,
-.close:hover {
+.modal-header .btn-close:hover, .modal-header .close:hover,
+.btn-close:hover, .close:hover {
     background: #CFB64E !important;
     transform: translateY(-50%) scale(1.12) !important;
     box-shadow: 0 4px 18px rgba(236, 209, 100, 0.45) !important;
 }
 
-.modal-header .btn-close::after,
-.btn-close::after {
+.modal-header .btn-close::after, .btn-close::after {
     display: none !important;
 }
 
@@ -947,11 +746,7 @@ button.close,
     border-radius: 0 0 16px 16px !important;
 }
 
-/* ============================================
-   BUTOANE IN MODALE (NON-TABEL)
-============================================ */
-.modal-footer button,
-.modal-footer .btn,
+.modal-footer button, .modal-footer .btn,
 form button:not(table button):not(tbody button):not(td button),
 form .btn:not(table .btn):not(tbody .btn):not(td .btn),
 form input[type="submit"] {
@@ -975,16 +770,12 @@ form input[type="submit"] {
     animation: none !important;
 }
 
-.modal-footer button:hover,
-.modal-footer .btn:hover {
+.modal-footer button:hover, .modal-footer .btn:hover {
     transform: translateY(-2px) !important;
     background: #CFB64E !important;
     box-shadow: 0 5px 18px rgba(200, 179, 96, 0.3) !important;
 }
 
-/* ============================================
-   FORMULARE IN MODALE
-============================================ */
 .modal-body form {
     text-align: center !important;
     padding: 8px !important;
@@ -1008,16 +799,13 @@ form input[type="submit"] {
     transition: all 0.3s ease !important;
 }
 
-.modal-body input:focus,
-.modal-body textarea:focus,
-.modal-body select:focus {
+.modal-body input:focus, .modal-body textarea:focus, .modal-body select:focus {
     border-color: #C8B360 !important;
     box-shadow: 0 0 0 3px rgba(200, 179, 96, 0.12) !important;
     background: rgba(255, 255, 255, 0.06) !important;
 }
 
-.modal-body input::placeholder,
-.modal-body textarea::placeholder {
+.modal-body input::placeholder, .modal-body textarea::placeholder {
     color: rgba(255, 255, 255, 0.3) !important;
 }
 
@@ -1033,9 +821,6 @@ form input[type="submit"] {
     letter-spacing: 0.3px !important;
 }
 
-/* ============================================
-   LISTE
-============================================ */
 .list-group {
     border-radius: 12px !important;
     overflow: hidden !important;
@@ -1057,58 +842,20 @@ form input[type="submit"] {
     background: rgba(200, 179, 96, 0.08) !important;
 }
 
-/* ============================================
-   SCROLLBAR
-============================================ */
-::-webkit-scrollbar {
-    width: 6px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(39, 56, 82, 0.25);
-    border-radius: 10px;
-}
-
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: rgba(39, 56, 82, 0.25); border-radius: 10px; }
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(
-        180deg,
-        #C8B360 0%,
-        #273852 50%,
-        #C8B360 100%
-    );
+    background: linear-gradient(180deg, #C8B360 0%, #273852 50%, #C8B360 100%);
     border-radius: 10px;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
+::-webkit-scrollbar-thumb:hover { background: #ECD164; }
+.radio-player-card::-webkit-scrollbar, .modal-body::-webkit-scrollbar { width: 5px; }
 
-::-webkit-scrollbar-thumb:hover {
-    background: #ECD164;
-}
+.text-muted { color: rgba(200, 179, 96, 0.45) !important; }
+a { color: rgba(200, 179, 96, 0.8) !important; text-decoration: none !important; transition: color 0.2s ease !important; }
+a:hover { color: #ECD164 !important; }
 
-.radio-player-card::-webkit-scrollbar,
-.modal-body::-webkit-scrollbar {
-    width: 5px;
-}
-
-/* ============================================
-   TEXT GENERAL
-============================================ */
-.text-muted {
-    color: rgba(200, 179, 96, 0.45) !important;
-}
-
-a {
-    color: rgba(200, 179, 96, 0.8) !important;
-    text-decoration: none !important;
-    transition: color 0.2s ease !important;
-}
-
-a:hover {
-    color: #ECD164 !important;
-}
-
-/* ============================================
-   ALERTS & BADGES
-============================================ */
 .alert {
     background: rgba(200, 179, 96, 0.08) !important;
     border: 1px solid rgba(200, 179, 96, 0.25) !important;
@@ -1126,13 +873,7 @@ a:hover {
     padding: 3px 10px !important;
 }
 
-/* ============================================
-   FOOTER - COMIC SANS MS CENTRAT FRUMOS
-============================================ */
-#footer,
-.footer-alt,
-footer#footer,
-footer {
+#footer, .footer-alt, footer#footer, footer {
     text-align: center !important;
     padding: 20px 16px !important;
     font-family: "Comic Sans MS", "Comic Sans", cursive !important;
@@ -1146,7 +887,6 @@ footer {
     justify-content: center !important;
 }
 
-/* Container footer custom */
 .beatzone-footer-content {
     display: flex !important;
     flex-direction: column !important;
@@ -1159,7 +899,6 @@ footer {
     padding: 14px 16px !important;
 }
 
-/* Linia 1 - Copyright */
 .beatzone-footer-content .bz-copyright {
     display: block !important;
     width: 100% !important;
@@ -1167,34 +906,23 @@ footer {
     font-size: 14px !important;
     font-weight: bold !important;
     color: #ECD164 !important;
-    text-shadow:
-        0 0 10px rgba(236, 209, 100, 0.5),
-        1px 1px 3px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: 0 0 10px rgba(236, 209, 100, 0.5), 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
     letter-spacing: 0.5px !important;
     margin: 0 0 6px 0 !important;
     padding: 0 !important;
     text-align: center !important;
 }
 
-/* Separator auriu */
 .beatzone-footer-content .bz-separator {
     display: block !important;
     width: 220px !important;
     height: 1px !important;
     margin: 4px auto 10px auto !important;
     padding: 0 !important;
-    background: linear-gradient(
-        90deg,
-        transparent 0%,
-        rgba(200, 179, 96, 0.3) 20%,
-        rgba(236, 209, 100, 0.8) 50%,
-        rgba(200, 179, 96, 0.3) 80%,
-        transparent 100%
-    ) !important;
+    background: linear-gradient(90deg, transparent 0%, rgba(200, 179, 96, 0.3) 20%, rgba(236, 209, 100, 0.8) 50%, rgba(200, 179, 96, 0.3) 80%, transparent 100%) !important;
     border: none !important;
 }
 
-/* Linia 2 - Made with */
 .beatzone-footer-content .bz-madeby {
     display: block !important;
     width: 100% !important;
@@ -1202,16 +930,13 @@ footer {
     font-size: 13px !important;
     font-weight: normal !important;
     color: #ffffff !important;
-    text-shadow:
-        0 0 8px rgba(255, 255, 255, 0.3),
-        1px 1px 3px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
     letter-spacing: 0.3px !important;
     margin: 0 !important;
     padding: 0 !important;
     text-align: center !important;
 }
 
-/* Emoji-uri din footer */
 .beatzone-footer-content .bz-emoji {
     font-size: 15px !important;
     display: inline-block !important;
@@ -1220,30 +945,46 @@ footer {
     font-style: normal !important;
 }
 
-/* Link KaiDz */
 .beatzone-footer-content .bz-madeby a,
 .beatzone-footer-content a.bz-link {
     font-family: "Comic Sans MS", "Comic Sans", cursive !important;
     color: #ECD164 !important;
     text-decoration: none !important;
     font-weight: bold !important;
-    text-shadow:
-        0 0 10px rgba(236, 209, 100, 0.6),
-        1px 1px 3px rgba(0, 0, 0, 0.8) !important;
+    text-shadow: 0 0 10px rgba(236, 209, 100, 0.6), 1px 1px 3px rgba(0, 0, 0, 0.8) !important;
     transition: all 0.3s ease !important;
 }
 
 .beatzone-footer-content .bz-madeby a:hover,
 .beatzone-footer-content a.bz-link:hover {
     color: #ffffff !important;
-    text-shadow:
-        0 0 15px rgba(255, 255, 255, 0.7),
-        0 0 30px rgba(236, 209, 100, 0.4) !important;
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.7), 0 0 30px rgba(236, 209, 100, 0.4) !important;
 }
 
-/* ============================================
-   RESPONSIVE
-============================================ */
+.bz-lw {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    text-align: center !important;
+}
+
+.bz-lw img {
+    display: block !important;
+    height: auto !important;
+    max-width: 90% !important;
+    object-fit: contain !important;
+    margin: 0 auto 8px auto !important;
+    border-radius: 10px !important;
+}
+
+.bz-lw p {
+    margin: 0 !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
+
 @media (max-width: 768px) {
     .radio-player-card {
         top: auto !important;
@@ -1254,142 +995,35 @@ footer {
         width: calc(100% - 20px) !important;
         max-height: 80vh !important;
     }
-
-    .card-header {
-        padding: 20px 16px 16px !important;
-    }
-
-    h2.card-title,
-    .card-title {
-        font-size: 20px !important;
-    }
-
-    .button-container button,
-    .button-container .btn {
-        font-size: 10px !important;
-        padding: 8px 6px !important;
-    }
-
-    .modal-header .modal-title,
-    .modal-title {
-        font-size: 17px !important;
-    }
-
-    table button,
-    table .btn,
-    td button,
-    td .btn,
-    td.shrink button,
-    td.shrink .btn {
-        font-size: 10px !important;
-        padding: 5px 14px !important;
-        min-width: 75px !important;
-    }
-
-    td.shrink,
-    td:last-child {
-        min-width: 95px !important;
-    }
-
-    body::after {
-        font-size: 35px !important;
-        letter-spacing: 70px !important;
-        line-height: 150px !important;
-    }
-
-    .card-body.buttons > a,
-    .card-body.buttons > a.btn-link {
-        padding: 5px 10px !important;
-        font-size: 10px !important;
-        max-width: 120px !important;
-    }
-
-    /* Footer responsive */
-    .beatzone-footer-content .bz-copyright {
-        font-size: 12px !important;
-    }
-
-    .beatzone-footer-content .bz-madeby {
-        font-size: 11px !important;
-    }
-
-    .beatzone-footer-content .bz-separator {
-        width: 160px !important;
-    }
+    .card-header { padding: 20px 16px 16px !important; }
+    h2.card-title, .card-title { font-size: 20px !important; }
+    .button-container button, .button-container .btn { font-size: 10px !important; padding: 8px 6px !important; }
+    .modal-header .modal-title, .modal-title { font-size: 17px !important; }
+    table button, table .btn, td button, td .btn, td.shrink button, td.shrink .btn { font-size: 10px !important; padding: 5px 14px !important; min-width: 75px !important; }
+    td.shrink, td:last-child { min-width: 95px !important; }
+    body::after { font-size: 35px !important; letter-spacing: 70px !important; line-height: 150px !important; }
+    .card-body.buttons > a, .card-body.buttons > a.btn-link { padding: 5px 10px !important; font-size: 10px !important; max-width: 120px !important; }
+    .beatzone-footer-content .bz-copyright { font-size: 12px !important; }
+    .beatzone-footer-content .bz-madeby { font-size: 11px !important; }
+    .beatzone-footer-content .bz-separator { width: 160px !important; }
 }
 
 @media (max-width: 480px) {
-    .radio-player-card {
-        bottom: 5px !important;
-        right: 5px !important;
-        left: 5px !important;
-        width: calc(100% - 10px) !important;
-        max-height: 75vh !important;
-    }
+    .radio-player-card { bottom: 5px !important; right: 5px !important; left: 5px !important; width: calc(100% - 10px) !important; max-height: 75vh !important; }
+    .card-header { padding: 16px 12px 14px !important; }
+    h2.card-title, .card-title { font-size: 18px !important; }
+    .button-container { flex-wrap: wrap !important; }
+    .button-container button, .button-container .btn { flex: 1 1 45% !important; font-size: 9px !important; }
+    .modal-header .modal-title, .modal-title { font-size: 15px !important; }
+    table button, table .btn, td button, td .btn, td.shrink button, td.shrink .btn { font-size: 9px !important; padding: 4px 12px !important; min-width: 65px !important; }
+    td.shrink, td:last-child { min-width: 80px !important; }
+    body::after { font-size: 28px !important; letter-spacing: 50px !important; line-height: 120px !important; }
+    .card-body.buttons > a, .card-body.buttons > a.btn-link { padding: 4px 8px !important; font-size: 9px !important; max-width: 100px !important; }
+    .beatzone-footer-content .bz-copyright { font-size: 11px !important; }
+    .beatzone-footer-content .bz-madeby { font-size: 10px !important; }
+    .beatzone-footer-content .bz-separator { width: 130px !important; }
+}
 
-    .card-header {
-        padding: 16px 12px 14px !important;
-    }
-
-    h2.card-title,
-    .card-title {
-        font-size: 18px !important;
-    }
-
-    .button-container {
-        flex-wrap: wrap !important;
-    }
-
-    .button-container button,
-    .button-container .btn {
-        flex: 1 1 45% !important;
-        font-size: 9px !important;
-    }
-
-    .modal-header .modal-title,
-    .modal-title {
-        font-size: 15px !important;
-    }
-
-    table button,
-    table .btn,
-    td button,
-    td .btn,
-    td.shrink button,
-    td.shrink .btn {
-        font-size: 9px !important;
-        padding: 4px 12px !important;
-        min-width: 65px !important;
-    }
-
-    td.shrink,
-    td:last-child {
-        min-width: 80px !important;
-    }
-
-    body::after {
-        font-size: 28px !important;
-        letter-spacing: 50px !important;
-        line-height: 120px !important;
-    }
-
-    .card-body.buttons > a,
-    .card-body.buttons > a.btn-link {
-        padding: 4px 8px !important;
-        font-size: 9px !important;
-        max-width: 100px !important;
-    }
-
-    /* Footer responsive mic */
-    .beatzone-footer-content .bz-copyright {
-        font-size: 11px !important;
-    }
-
-    .beatzone-footer-content .bz-madeby {
-        font-size: 10px !important;
-    }
-
-    .beatzone-footer-content .bz-separator {
-        width: 130px !important;
-    }
+[data-bs-theme] body.page-minimal {
+    background-image: url('/static/uploads/background.1776770759.jpg');
 }
